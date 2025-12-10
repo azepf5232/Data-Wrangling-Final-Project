@@ -38,6 +38,54 @@ This project showed me that carat size drives diamond pricing far more than most
 
 ---
 
+## Visualizations (generated)
+
+Below are the main visualizations from the analysis. If the images aren't visible, generate them locally by running the included `generate_plots.py` script (instructions below).
+
+- **Carat vs Price (binned):**
+
+  ![Carat plot](figures/carat_plot.png)
+
+- **Average Price by Cut:**
+
+  ![Cut plot](figures/cut_plot.png)
+
+- **Price Distribution by Color (outliers removed):**
+
+  ![Color boxplot](figures/color_boxplot.png)
+
+- **Price Distribution by Clarity (outliers removed):**
+
+  ![Clarity boxplot](figures/clarity_boxplot.png)
+
+Generation instructions (PowerShell)
+
+1. Install Python (3.8+). If already installed, skip.
+2. (Optional) Create and activate a virtual environment:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+3. Install required packages and run the generator:
+
+```powershell
+python -m pip install --upgrade pip
+python -m pip install pandas matplotlib seaborn numpy statsmodels
+python generate_plots.py
+```
+
+4. Commit the generated images and push:
+
+```powershell
+git add figures/*.png
+git commit -m "Add generated visualizations"
+git push
+```
+
+---
+
 ## Project Code
 
 The full analysis script is saved in the repository as `data wrangling.qmd`. You can view or download it directly from the repo.
